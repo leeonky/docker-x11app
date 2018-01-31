@@ -14,6 +14,6 @@ RUN sudo apt-get update && sudo apt-get install -y \
 
 ADD setup_im.sh $USER_HOME/bin/setup_im.sh
 ADD x11app_launch.sh $USER_HOME/bin/x11app_launch.sh
-RUN sudo chmod +x $USER_HOME/bin/*
+RUN sudo chmod +x $USER_HOME/bin/* && sudo chown $USER_NAME:$USER_NAME $USER_HOME/bin/*
 
 
